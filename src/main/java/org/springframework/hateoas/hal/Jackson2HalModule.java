@@ -370,7 +370,11 @@ public class Jackson2HalModule extends SimpleModule {
 
             List<?> list = (List<?>) value;
 
-            if (list.size() == 1 && !wrapSingleElemLists) {
+            // HACK: render a single element rather than an array when encountering a Link with "self" relation.
+            boolean renderSingleElement =
+                    list.size() == 1 && (!wrapSingleElemLists || (list.get(0) instanceof Link && "self".equals(((Link) list.get(0)).getRel())));
+
+            if (renderSingleElement) {
                 serializeContents(list.iterator(), jgen, provider);
                 return;
             }

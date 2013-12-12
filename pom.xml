@@ -4,7 +4,7 @@
 	
 	<groupId>org.springframework.hateoas</groupId>
 	<artifactId>spring-hateoas</artifactId>
-	<version>0.9.0.BUILD-SNAPSHOT</version>
+	<version>0.8.0.RELEASE-BIGPOINT</version>
 	
 	<name>Spring Hateoas</name>
 	<url>http://github.com/SpringSource/spring-hateoas</url>
@@ -326,5 +326,24 @@
 		<connection>scm:git:git://github.com/SpringSource/spring-hateoas.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com:SpringSource/spring-hateoas.git</developerConnection>
 	</scm>
+
+    <!-- distribute to Bigpoint nexus -->
+
+    <distributionManagement>
+
+        <repository>
+            <id>bigpoint-nexus</id>
+            <name>bigpoint-nexus-releases</name>
+            <url>http://artifact-01.bigpoint.net:8080/nexus/content/repositories/releases</url>
+
+        </repository>
+
+        <snapshotRepository>
+            <id>bigpoint-nexus</id>
+            <name>bigpoint-nexus-snapshot</name>
+            <url>http://artifact-01.bigpoint.net:8080/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+
+    </distributionManagement>
 	
 </project>

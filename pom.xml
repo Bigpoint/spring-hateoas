@@ -320,12 +320,19 @@
 			<url>http://repo.springsource.org/libs-snapshot</url>
 		</repository>
 	</repositories>
-	
+
+<!--
 	<scm>
 		<url>https://github.com/SpringSource/spring-hateoas</url>
 		<connection>scm:git:git://github.com/SpringSource/spring-hateoas.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com:SpringSource/spring-hateoas.git</developerConnection>
 	</scm>
+-->
+    <scm>
+        <url>https://github.com/Bigpoint/spring-hateoas</url>
+        <connection>scm:git:git://github.com/Bigpoint/spring-hateoas.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:Bigpoint/spring-hateoas.git</developerConnection>
+    </scm>
 
     <!-- distribute to Bigpoint nexus -->
 
